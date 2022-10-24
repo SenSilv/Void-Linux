@@ -40,8 +40,6 @@ sv up /var/service/ufw
 ln -s /etc/sv/i3 /var/service/
 sv up /var/service/i3
 
-cp /home/admin/backup/etc /etc
-
 # Hardening the directory
 chmod og-rwx /home/admin
 
