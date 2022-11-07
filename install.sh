@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## Configure Firewall
+## Configure Firewall and ADGuard DNS
 echo '94.140.14.14' >> /etc/resolv.conf.head
 
 iptables -X
@@ -46,8 +46,6 @@ chmod og-rwx /home/admin
 #echo 'b08dfa6083e7567a1921a715000001fb' >> /var/lib/dbus/machine-id
 echo 'proc /proc proc nosuid,nodev,noexec,hidepid=2,gid=proc 0 0' >> /etc/fstab
 echo 'umask 0077' >> /etc/profile
-
-cp /home/admin/backup/securetty /etc/securetty
 
 ## Font rendering
 ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
