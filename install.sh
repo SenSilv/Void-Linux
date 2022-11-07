@@ -19,7 +19,7 @@ ln -s /etc/sv/iptables /var/service/iptables/
 sv restart /var/service/iptables
 
 ## Update System
-xbps-install -Suy
+xbps-install -u xbps && xbps-install -Suy
 
 xbps-install xorg-minimal i3-gaps xf86-video-nouveau alsa-utils apparmor st firefox noto-fonts-cjk nano
 
